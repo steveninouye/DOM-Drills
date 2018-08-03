@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  let listNum = 1;
+
   const colors = [
     "teal",
     "tomato",
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     element.style.color = colors[index];
   };
 
-  const createListItem = num => {
+  const createListItem = () => {
     const item = document.createElement("li");
     const itemTxt = document.createTextNode(`this is list item ${listNum}`);
     item.appendChild(itemTxt);
@@ -62,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const odrList = document.createElement("ol");
   document.body.appendChild(odrList);
-  let listNum = 1;
 
   document
     .querySelector(".addNewItemBtn")
